@@ -2,7 +2,6 @@
 @extends('layouts.default')
 @section('title', 'DW32 - Grupo 1 Laravel')
 @section('content')
-<br><br><br>
 <h1>Configuracion</h1>
 @if(isset($mensaje))
   <h2>{{$mensaje}}</h2>
@@ -42,6 +41,6 @@
   <input type="submit" value="Enviar" name="enviar">
 </form> 
 @stop
-@section('enlaces')
+@section('historial')
 
 @stop

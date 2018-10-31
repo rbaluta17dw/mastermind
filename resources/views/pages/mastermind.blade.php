@@ -18,9 +18,6 @@
     @endfor
   </select>
   @endfor
-  @for ($i=0; $i < $lonEle; $i++)
-  <img width='32px' height='32px' src='images/{{$arrayEle[$i]}}.png'>
-  @endfor
   <br>
   @if (isset($mensaje))
   <h2>{{$mensaje}}</h2>
@@ -32,6 +29,9 @@
 </form>
 <br>
 <p>Numero de intentos: {{$intentos}}</p>
+
+@stop
+@section('historial')
 @if(isset($turnos))
 @foreach ($turnos as $turno)
 @for ($i = 0; $i < count($turno['numJugador']);$i++)
@@ -39,9 +39,5 @@
 @endfor
 <p>Aciertos: {{$turno['aciertos']}} Candidatos : {{$turno['candidatos']}}</p>
 @endforeach
-
 @endif
-@stop
-@section('enlaces')
-
 @stop
